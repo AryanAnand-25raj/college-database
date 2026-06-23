@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+.College-Data {
+    padding: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.College-Data h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #58a6ff;
+    letter-spacing: 0.5px;
+}
+
+.college-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.college-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.college-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #58a6ff;
+}
+
+.college-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.college-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e6edf3;
+    margin-bottom: 0.6rem;
+}
+
+.college-grade,
+.college-placement,
+.college-area {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: #8b949e;
+}
+
+.college-rating {
+    margin-top: 0.8rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+p.best-college {
+    background-color: #1f6feb;
+    color: #fff;
+}
+
+p.great-college {
+    background-color: #238636;
+    color: #fff;
+}
+
+p.good-college {
+    background-color: #9e6a03;
+    color: #fff;
+}
+
+p.average {
+    background-color: #6e3030;
+    color: #fff;
+}
+
+.loading-spinner {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    color: #58a6ff;
+}
+
+button {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background-color: #21262d;
+    color: #e6edf3;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #30363d;
+    border-color: #58a6ff;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    background: #21262d;
+    color: #e6edf3;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: #58a6ff;
+}
+
+.filter-btn.active {
+    background-color: #1f6feb;
+    color: #fff;
+    border-color: #1f6feb;
+}
+
+.sort-section label {
+    font-size: 1rem;
+    color: #8b949e;
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+.sort-section select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #30363d;
+    border-radius: 25px;
+    background: #161b22;
+    color: #e6edf3;
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.sort-section select:hover {
+    border-color: #58a6ff;
+}
+
+.clear-filters {
+    display: block;
+    margin: 1rem auto 2rem auto;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #21262d;
+    color: #e6edf3;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+}
+
+.clear-filters:hover {
+    background-color: #1f6feb;
+    border-color: #1f6feb;
+    color: #fff;
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 2rem;
+    color: #8b949e;
+}
+
+.empty-state h3 {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+    color: #58a6ff;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid #30363d;
+    border-radius: 25px;
+    background-color: #161b22;
+    color: #e6edf3;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: #8b949e;
+}
+
+.search-input:hover {
+    border-color: #58a6ff;
+}
+
+.search-input:focus {
+    border-color: #1f6feb;
+    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.25);
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
