@@ -54,3 +54,20 @@ const collegeData = [
         rating: 7.0,
     }
 ];
+
+export default function CollegeData() {
+    return (
+        <div>
+            {collegeData.map(college => (
+                <div key={college.id}>
+                    <img src={college.image} alt={college.title} />
+                    <h2>{college.title}</h2>
+                    <p>NAAC Grade: {college.NAAC_Grade}</p>
+                    <p>Placed Students: {college.Placed_Students}%</p>
+                    <p>Rating: {college.rating}</p>
+                    <p>Area: {college.Area.join(', ')}</p>
+                </div>
+            ))}
+        </div>
+    );
+}
