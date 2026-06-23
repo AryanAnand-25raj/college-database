@@ -124,7 +124,7 @@ function CollegeData() {
                     <div className='search-section'>
                         <input
                             type="text"
-                            placeholder="Search College Name"
+                            placeholder="Search College Name"       
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="search-input"
