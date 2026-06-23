@@ -1,3 +1,5 @@
+import './CollegeData.css';
+
 const collegeData = [
     {
         id: 1,
@@ -54,3 +56,49 @@ const collegeData = [
         rating: 7.0,
     }
 ];
+
+function getRatingClass(rating) {
+    if (rating >= 9) {
+        return "best-college";
+    }
+
+    if (rating >= 8) {
+        return "great-college";
+    }
+
+    if (rating >= 7) {
+        return "good-college";
+    }
+
+    return "average";
+}
+
+function CollegeData() {
+    return (
+        <main className="College-Data">
+            <h1>College Database</h1>
+            <div className="college-product-grid">
+                {collegeData.map((college) => (
+                    <article className="college-card" key={college.id}>
+                        <img
+                            className="college-image"
+                            src={college.image}
+                            alt={college.title}
+                        />
+                        <h2 className="college-title">{college.title}</h2>
+                        <p className="college-grade">NAAC Grade: {college.NAAC_Grade}</p>
+                        <p className="college-placement">
+                            Placed Students: {college.Placed_Students}%
+                        </p>
+                        <p className="college-area">Area: {college.Area.join(", ")}</p>
+                        <p className={`college-rating ${getRatingClass(college.rating)}`}>
+                            Rating: {college.rating.toFixed(1)}
+                        </p>
+                    </article>
+                ))}
+            </div>
+        </main>
+    );
+}
+
+export default CollegeData;
